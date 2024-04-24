@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Catalunha</title>
+
+    <!-- LINK BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- LINKS CSS -->
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <!-- ICONS BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- ICONS FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--FAVICON-->
+  <link rel="shortcut icon" href="src/images/favicon/sinal-do-hotel.png" type="image/x-icon">
+
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <!-- Container define uma largura e centraliza ao meio -->
+      <div class="container py-1">
+        <a href="index.html" class="navbar-brand fw-bold">Hotem Catalunha</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavegacao"
+          aria-controls="navbarNavegacao"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Definindo as ul e li-->
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-lg-end"
+          id="navbarNavegacao"
+        >
+          <ul class="navbar-nav">
+
+            <li class="nav-item d-block py-2">
+
+              <a href="login.html" type="button" class="btn btn-orange w-100 rounded-0">
+                Login
+              </a>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--END NAVBAR-->
+
+    <!--BANNER-->
+
+    <main class="w-100 min-vh-100 background-banner d-flex align-items-center">
+      <section class="container">
+        <div class="card rounded-1 border-0 p-1 py-4 p-lg-4 pb-md-0 pb-lg-0 shadow">
+          <div class="card-body">
+            <form class="pb-lg-2" onsubmit="return false;">
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
+                  <label for="local" class="form-label fw-bold"
+                    >Localização</label
+                  >
+                  <input
+                    type="text"
+                    id="local"
+                    class="form-control rounded-0"
+                    name="local"
+                    placeholder="Digite sua Localização"
+                  />
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 mb-3">
+                  <label for="entrada" class="form-label fw-bold"
+                    >Entrada</label
+                  >
+                  <input
+                    type="date"
+                    id="entrada"
+                    class="form-control rounded-0"
+                    name="entrada"
+                  />
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 mb-3">
+                  <label for="saida" class="form-label fw-bold">Saída</label>
+                  <input
+                    type="date"
+                    class="form-control rounded-0"
+                    name="saida"
+                  />
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
+                  <label for="periodo" class="form-label fw-bold"
+                    >Período</label
+                  >
+                  <select
+                    class="form-select rounded-0"
+                    name="periodo"
+                    id="periodo"
+                    aria-label="Selecione o período"
+                  >
+                    <option value="" selected>Selecione o Período</option>
+                    <option value="madrugada">Madrugada</option>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 my-3 d-lg-flex align-items-end">
+                  <a href="result.html" class="btn btn-lg btn-orange w-100 rounded-0 border-0 p-lg-1">Pesquisar</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--END BANNER-->
+
+    <!--DESTAQUES-->
+    <main class="w-100 pb-5 pt-lg-4 pb-lg-5">
+      <div class="container pt-5 pb-2 pt-lg-5 pb-lg-0">
+        <h1 class="fs-4 text-center text-lg-start mb-5 fw-bold">
+          Hotéis e Pousadas em destaques
+        </h1>
+        <div class="row mb-4">
+          <div class="col-12 col-md-12 col-lg-4 mb-5">
+            <div class="card shadow border-0">
+              <div class="position-relative">
+                <img src="src/images/hoteis/hotel-1.jpeg" alt="Hotel 01" class="img-fluid">
+                <span class="position-absolute 
+                bottom-0 right-0 bg-color-orange px-2 py-1">
+                R$ 669,00
+              </span>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mb-1">Hotel Califórnia</h5>
+                <p class="text-muted">Porto Seguro/BA</p>
+                <p class="card-text">
+                  Hotel próximo de várias lindas prais com várias atrações turísticas da região da Bahia.
+                </p>
+                <a href="unavailable.html" class="btn btn-orange rounded-0 w-100">Verificar Disponibilidade</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 mb-5">
+            <div class="card shadow border-0">
+              <div class="position-relative">
+                <img src="src/images/hoteis/hotel-2.jpeg" alt="Hotel 02" class="img-fluid">
+                <span class="position-absolute bottom-0 right-0 bg-color-orange px-2 py-1">R$ 869,99</span>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mb-1">Hotel Aurora Lodge</h5>
+                <p class="text-muted">
+                  Rio de Janeiro
+                </p>
+                <p class="card-text">
+                  Se está a procura de um hotel luxuoso e tecnologico, está no lugar certo, um local ideal para você e sua família.
+                </p>
+                <a href="available.html" class="btn btn-orange rounded-0 w-100">Verificar Disponibilidade</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4 mb-5">
+            <div class="card shadow border-0">
+              <div class="position-relative">
+                <img src="src/images/hoteis/hotel-3.jpeg" alt="Hotel 03" class="img-fluid">
+                <span class="position-absolute bottom-0 right-0 bg-color-orange px-2 py-1">R$ 999,99</span>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mb-1">
+                 Pousada Atlântica
+                </h5>
+                <p class="text-muted">
+                  Recife/PE
+                </p>
+                <p class="card-text">
+                  Pousada próximo de várias lindas prais com várias atrações turísticas da região da Bahia.
+                </p>
+                <a href="available.html" class="btn btn-orange rounded-0 w-100">Verificar Disponibilidade</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <a href="all.html" class="btn btn-orange-outline ps-4 pe-4 rounded-0"> Visualizar Todos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <!--END DESTAQUES-->
+
+    <!--PROMOÇÔES-->
+    <main class="w-100 pb-5 pb-lg-5">
+      <div class="container">
+        <div class="w-100 title mb-5 mb-md-5 mb-lg-5 pt-lg-4 pb-lg-0">
+          <h1 class="fs-4 text-center text-lg-start mb-2 fw-bold">
+            Nossos Hotéis e Pousadas em Promoções
+          </h1>
+        </div>
+          <div class="row mb-4">
+            <div class="col-12 col-md-12 col-lg-4 mb-5">
+              <div class="card shadow border-0">
+                <div class="position-relative">
+                  <img src="src/images/hoteis/hotel-4.jpeg" alt="Hotel 04" class="img-fluid">
+                  <span class="position-absolute bottom-0 right-0 px-2 py-1 bg-color-roxo">R$ 350,00</span>
+                </div>
+                <div class="card-body p-3">
+                  <h5 class="card-title mb-1">
+                    Hotel Jardim Colorado
+                  </h5>
+                  <p class="text-muted">
+                    Copacabana/RG
+                 </p>
+                 <a href="available.html" class="btn btn-roxo rounded-0 w-100">
+                  Verificar Disponibilidade
+                 </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 mb-5">
+              <div class="card shadow border-0">
+                <div class="position-relative">
+                  <img src="src/images/hoteis/hotel-5.jpeg" alt="Hotel 05" class="img-fluid">
+                  <span class="position-absolute bottom-0 right-0 bg-color-roxo px-2 py-1">R$ 269,99</span>
+                </div>
+                <div class="card-body p-3">
+                  <h5 class="card-title mb-1">
+                    Hotel Resplendor
+                  </h5>
+                  <p class="text-muted">
+                    Vitória/ES
+                  </p>
+                  <a href="unavailable.html" class="btn btn-roxo rounded-0 w-100 ">Verificar Disponibilidade</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 mb-5">
+              <div class="card shadow border-0">
+                <div class="position-relative">
+                  <img src="src/images/hoteis/hotel-6.jpg" alt="Hotel 06" class="img-fluid">
+                  <span class="position-absolute bottom-0 right-0 bg-color-roxo px-2 py-1">R$ 199,99</span>
+                </div>
+                <div class="card-body p-3">
+                  <h5 class="card-title mb-1">
+                    Pousada Morada
+                  </h5>
+                  <p class="text-muted">
+                    Aracruz/ES
+                  </p>
+                  <a href="available.html" class="btn btn-roxo rounded-0 w-100">Verificar Disponibilidade</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <a href="all.html" class="btn btn-roxo-outline ps-4 pe-4 rounded-0">
+                Visualizar Todos
+              </a>
+            </div>
+          </div>
+      </div>
+    </main>
+    <!--END PROMOÇÔES-->
+
+    <!--DIFERENCIAIS-->
+    <main class="w-100">
+      <div class="container">
+        <div class="w-100 title mb-5 mb-md-5 mb-lg-5 pt-lg-4 pb-lg-0">
+          <h1 class="fs-4 fw-bold text-center text-md-start text-lg-start">
+            Vejam alguns dos nossos diferenciais
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-md-4 col-lg-4 mb-4">
+                <div class="card">
+                  <img src="src/images/utilidades/camera.jpeg" alt="Câmera" class="img-fluid">
+                  <div class="card-body">
+                    <div class="card-title">
+                      Câmera de Segurança
+                    </div>
+                    <p class="card-text text-muted">
+                      Uma preocupação quando viajamos é se estamos seguro naquele local.
+                    </p>
+                    <p class="card-text text-muted">
+                      Por isso estamos sempre investindo pesado em segurança, justamente para você ficar tranquilo(a) enquanto estiver conosco.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 mb-4">
+                <div class="card">
+                  <img src="src/images/utilidades/campo.jpeg" alt="Campo de Futebol">
+                  <div class="card-body">
+                    <div class="card-title">
+                      Campo de Futebol
+                    </div>
+                    <p class="card-text text-muted">
+                      Quem não gosta de um bom futebol, não é verdade?
+                    </p>
+                    <p class="card-text text-muted">
+                      Oferecemos um campo de Futebol com um dos melhores gramado, para jogar você e sua família e amigos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4 mb-4">
+                <div class="card">
+                  <img src="src/images/utilidades/piscina.jpeg" alt="Piscina">
+                  <div class="card-body">
+                    <div class="card-title">
+                      Piscina de Natação
+                    </div>
+                    <p class="card-text text-muted">
+                      No calor que tem feito esses dias, você não pode ficar sem se refrescar.
+                    </p>
+                    <p class="card-text text-muted">
+                      Mesmo tendo praias e cachoeiras próximos dos nossos hotéis e pousadas, pensando no seu bem estar, oferecemos uma piscina
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--END DIFERENCIAIS-->
+
+    <!--NOSSOS QUARTOS-->
+    <main class="w-100 pb-4 pb-md-4 py-lg-4">
+      <div class="container pt-5 pb-2 pt-lg-5 pb-lg-5">
+        <h1 class="fs-4 text-center text-lg-start mb-5 fw-bold">Conheça nossos quartos</h1>
+      <div id="carouselControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="0">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="src/images/quartos/quarto-1.jpeg" alt="Quarto 1" class="d-block w-100 rounded-1 carousel-item-img">
+          </div>
+          <div class="carousel-item">
+            <img src="src/images/quartos/quarto-2.jpeg" alt="Quarto 2" class="d-block w-100 rounded-1 carousel-item-img">
+          </div>
+          <div class="carousel-item">
+            <img src="src/images/quartos/quarto-3.jpeg" alt="Quarto 3" class="d-block w-100 rounded-1 carousel-item-img">
+          </div>
+          <div class="carousel-item">
+            <img src="src/images/quartos/quarto-4.jpeg" alt="Quarto 4" class="d-block w-100 rounded-1 carousel-item-img">
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselControls" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselControls" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselControls" data-bs-slide-to="2"></li>
+          <li data-bs-target="#carouselControls" data-bs-slide-to="3"></li>
+        </ol>
+      </div>
+    </div>
+    </main>
+    <!--END NOSSOS QUARTOS-->
+
+    <!--AVALIAÇÔES-->
+    <main class="w-100 py-lg-5">
+      <div class="container pt-5 pb-2 pt-lg-5 pb-lg-5">
+        <div class="w-100 title mb-5 mb-md-5 mb-lg-5 pt-lg-0">
+          <h1 class="fs-4 text-center text-lg-center mb-2 fw-bold">Avaliações dos nossos clientes</h1>
+          <div class="line-orange m-auto"></div>
+        </div>
+        <div class="row pt-3 pt-md-3 pt-lg-3">
+
+          <div class="col-12 col-md-12 col-lg-4 mb-4 mb-md-4">
+            <div class="card border-0 shadow p-2">
+              <div class="card-body">
+                <div class="w-100 mb-3">
+                  <h4 class="fs-5">Devin Cortes Caruso</h4>
+                  <span><i class="fa-solid fa-star color-yellow"></i></span>
+                  <span><i class="fa-solid fa-star color-yellow"></i></span>
+                  <span><i class="fa-solid fa-star color-yellow"></i></span>
+                  <span><i class="fa-solid fa-star color-yellow"></i></span>
+                  <span><i class="fa-solid fa-star color-yellow"></i></span>
+                </div>
+                <p>
+                  A experiência no hotel foi simplesmente incrível! A equipe foi extremamente atenciosa e prestativa, e as comodidades foram de alto nível. Definitivamente recomendo este lugar a todos os que procuram uma estadia inesquecível.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-4 mb-4">
+            <div class="card border-0 shadow p-2">
+              <div class="card-body">
+                <div class="w-100 mb-3">
+                <h4 class="fs-5">Kauan Carvalho Cunha</h4>
+                <span>
+                  <i class="fa-solid fa-star color-yellow"></i>
+                </span>
+                <span>
+                  <i class="fa-solid fa-star color-yellow"></i>
+                </span>
+                <span>
+                  <i class="fa-solid fa-star color-yellow"></i>
+                </span>
+                <span>
+                  <i class="fa-solid fa-star color-yellow"></i>
+                </span>
+                <span>
+                  <i class="fa-solid fa-star color-yellow"></i>
+                </span>
+              </div>
+                <p>
+                  Minha estadia no hotel foi excepcional! Desde o serviço impecável até as instalações luxuosas, tudo superou minhas expectativas. Mal posso esperar para voltar!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body shadow border-0">
+                <div class="w-100 mb-3">
+                  <h4 class="fs-5">Larissa Correia Souza</h4>
+                  <span>
+                    <i class="fa-solid fa-star color-yellow"></i>
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-star color-yellow"></i>
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-star color-yellow"></i>
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-star color-yellow"></i>
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-star color-yellow"></i>
+                  </span>
+                </div>
+                <p>
+                  Minha estadia no hotel foi maravilhosa! O ambiente era acolhedor, os quartos eram confortáveis e a comida no restaurante era deliciosa. Mal posso esperar para voltar novamente!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--END AVALIAÇÔES-->
+
+    <!--FOOTER-->
+    <footer class="w-100 bg-light">
+      <div class="container pt-5 pt-lg-5 pb-lg-3">
+        <div class="row pt-3 ">
+          <div class="col-12 col-md-3 col-lg-4 mb-3 mb-md-0 mb-lg-0">
+            <h4 class="fs-4 fw-bold text-uppercase mb-2 mb-md-4 mb-lg-4">Hotel Catalunha</h4>
+            <p class="text-muted fs-6">
+              Somos uma empresa de hotéis de classe mundial, oferecendo destinos premium em todo o mundo, com o compromisso de proporcionar experiências memoráveis e serviços personalizados que excedem as expectativas dos nossos hóspedes."
+            </p>
+            <p>
+              <a href="#" title="Facebook" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#" title="Twitter" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" title="Instagram" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-4 pe-lg-0 ps-lg-5 mb-3 mb-md-0 mb-lg-0">
+            <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Minha Conta</h4>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Minhas Viagens</a>
+            </p>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Meu Perfil</a>
+            </p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-4 mb-3 mb-md-0 mb-lg-0">
+            <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Informações Adicionais</h4>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Termos e Condições</a>
+            </p>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Política de Privacidade</a>
+            </p>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Central de Ajuda</a>
+            </p>
+            <p class="mb-0">
+              <a href="#" class="text-decoration-none text-muted">Condições de Uso</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 bg-color-orange d-flex justify-content-center align-items-center">
+        <p class="mb-0 pt-1 pb-1">
+          &copy; Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
+    <!--END FOOTER-->
+  </body>
+  <script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+  crossorigin="anonymous"
+></script>
+</html>

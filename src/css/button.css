@@ -1,0 +1,104 @@
+.btn-orange {
+  color: var(--bg-white);
+  background-color: var(--bg-orange);
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.btn-orange:hover {
+  color: var(--bg-white);
+  background-color: var(--bg-orange-hover);
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.btn-orange-outline {
+  color: var(--bg-orange);
+  background-color: transparent;
+  outline: 2px solid var(--bg-orange);
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+}
+
+.btn-orange-outline:hover {
+  color: var(--bg-white);
+  background-color: var(--bg-orange);
+  border-radius: 0px;
+  outline: none;
+}
+
+.btn-roxo {
+  color: var(--bg-white);
+  background-color: var(--bg-roxo);
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.btn-roxo:hover {
+  color: var(--bg-white);
+}
+
+.btn-roxo-outline {
+  color: var(--bg-roxo);
+  background-color: transparent;
+  outline: 2px solid var(--bg-roxo);
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+}
+
+.btn-roxo-outline:hover {
+  color: var(--bg-white);
+  background-color: var(--bg-roxo);
+  border-radius: 0px;
+  outline: none;
+}
+
+.btn-tooltip-default {
+  width: auto;
+  height: auto;
+  color: var(--bg-orange);
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0px;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.btn-tooltip-default:hover {
+  color: var(--bg-orange-hover);
+}
+
+.btn-login {
+  color: var(--bg-white);
+  background-color: var(--bg-orange);
+  outline: none;
+  font-size: 1rem;
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.btn-login:hover {
+  color: var(--bg-white);
+  background-color: var(--bg-orange-hover);
+  outline: none;
+  font-size: 1rem;
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
